@@ -19,7 +19,7 @@
 
 ## 共享
 
-![share](https://cloud.githubusercontent.com/assets/970828/21706637/c7cb3464-d403-11e6-902d-ed50c40ace42.png)
+![share](https://cloud.githubusercontent.com/assets/873584/21706876/2dc126ba-d405-11e6-9e59-dc3bab775f49.png)
 
 * 微信提交书籍共享请求
 
