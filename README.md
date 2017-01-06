@@ -6,6 +6,7 @@
 
 ![login](https://cloud.githubusercontent.com/assets/873584/21684780/0bc06672-d39a-11e6-9580-5b9839bbc3a6.png)
 
+* 对 md5.js 进行封装，使其可以在小程序中进行使用
 * 微信提交登录请求
 * 使用微信数据缓存存储用户标识以实现类似 Cookie 的作用
 
@@ -18,7 +19,7 @@
 
 ## 共享
 
-![share](https://cloud.githubusercontent.com/assets/970828/21706056/05e2a11a-d3ff-11e6-82de-fc7447175a91.jpeg)
+![share](https://cloud.githubusercontent.com/assets/970828/21706637/c7cb3464-d403-11e6-902d-ed50c40ace42.png)
 
 * 微信提交书籍共享请求
 
