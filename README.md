@@ -1,7 +1,6 @@
 # symphony-weapp
 
-[Symphony](https://github.com/b3log/symphony) 社区平台的微信小程序，提供一些实用工具服务，比如[『书单』](https://hacpai.com/tag/book_share)。
-
+[Symphony](https://github.com/b3log/symphony) 社区平台的微信小程序，提供一些实用工具服务，比如[『书单』](https://hacpai.com/tag/book_share)，可前往 [体验](https://hacpai.com/article/1483598914214) 。
 ## 登录
 
 ![login](https://cloud.githubusercontent.com/assets/873584/21684780/0bc06672-d39a-11e6-9580-5b9839bbc3a6.png)
