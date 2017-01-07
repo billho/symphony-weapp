@@ -4,9 +4,8 @@
   <form bindsubmit="login">
     <image class="logo" src="../../image/logo.png"></image>
     <view class="ft-center">黑客与画家的社区</view>
-    <input name="userName" bindinput="setUserName" placeholder="用户名/邮箱"/>
-    <input password name="password" bindinput="setPassword" placeholder="密码"/>
-    <button type="primary" form-type="submit">登录</button>
-    <button bindtap="register">注册</button>
+    <input value="{{userName}}" name="userName" bindinput="setUserName" placeholder="用户名/邮箱"/>
+    <input value="{{password}}" password name="password" bindinput="setPassword" placeholder="密码"/>
+    <button disabled="{{disabled}}" type="primary" form-type="submit">登录</button>
   </form>
 </view>

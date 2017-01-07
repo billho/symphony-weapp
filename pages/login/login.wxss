@@ -1,13 +1,8 @@
 .logo {
-  width: 70vw;
-  height: 70vw;
-  margin: 0 auto;
+  width: 254px;
+  height: 183px;
+  margin: 40rpx auto;
   display: block;
-}
-
-button {
-  margin-top: 40rpx;
-  font-size: 32rpx;
 }
 
 input {
@@ -15,10 +10,10 @@ input {
   background-color: #fafafa;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075) inset;
-  padding: 7px 8px;
+  padding: 10px 10px;
   box-sizing: border-box;
   margin-bottom: 40rpx;
-  height: 33px;
+  height: 46px;
 }
 
 .ft-center {

@@ -2,12 +2,53 @@ var calcMD5 = require('../../js/md5.js');
 var Util = require('../util/util.js');
 Page({
   data: {
+    userName: 'book_share',
+    password: 'book_share',
+    disabled: true
   },
   /**
    * 初始化加载
    * options url 参数
    */
   onLoad: function (options) {
+
+    Util.networkStatus()
+    var that = this;
+    wx.request({
+      url: 'https://hacpai.com/login',
+      data: {
+        nameOrEmail: this.data.userName,
+        userPassword: calcMD5(this.data.password),
+        rememberLogin: true,
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        if (res.errMsg !== 'request:ok') {
+          wx.showToast({
+            title: res.errMsg,
+            icon: 'loading',
+            duration: 3000
+          })
+          return false;
+        }
+
+        if (!res.data.sc) {
+          that.setData({
+            userName: '',
+            password: ''
+          })
+        }
+      },
+      complete: function () {
+        that.setData({
+          disabled: false
+        })
+      }
+    });
+
     wx.getStorage({
       key: 'cookie',
       success: function (res) {
@@ -18,15 +59,6 @@ Page({
           url: '../scan/scan'
         })
       }
-    })
-  },
-  /**
-   * 注册
-   */
-  register: function () {
-    wx.showModal({
-      content: '小程序暂不支持注册, 请前往 https://hacpai.com 进行注册',
-      showCancel: false
     })
   },
   /**
