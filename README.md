@@ -1,9 +1,9 @@
 # symphony-weapp
 
-[Symphony](https://github.com/b3log/symphony) 社区平台的微信小程序，提供一些实用工具服务，比如[『书单』](https://hacpai.com/tag/book_share)，可前往 [体验](https://hacpai.com/article/1483598914214) 。
+Symphony 社区平台的微信小程序，提供一些实用工具服务，比如[『书单』](https://hacpai.com/tag/book_share)，可前往 [体验](https://hacpai.com/article/1483598914214) 。
 ## 登录
 
-![login](https://cloud.githubusercontent.com/assets/873584/21684780/0bc06672-d39a-11e6-9580-5b9839bbc3a6.png)
+![login](http://git.oschina.net/uploads/images/2017/0108/131646_c5875567_301269.png)
 
 * 对 md5.js 进行封装，使其可以在小程序中进行使用
 * 微信提交登录请求
@@ -11,14 +11,14 @@
 
 ## 书单
 
-![isbn](https://cloud.githubusercontent.com/assets/873584/21684779/0bb8084c-d39a-11e6-99df-1093694ded09.png)
+![isbn](http://git.oschina.net/uploads/images/2017/0108/131547_5e303f25_301269.png)
 
 * 调用微信扫码接口读取书籍 ISBN
 * 微信提交书籍信息查询
 
 ## 共享
 
-![share](https://cloud.githubusercontent.com/assets/873584/21706876/2dc126ba-d405-11e6-9e59-dc3bab775f49.png)
+![share](http://git.oschina.net/uploads/images/2017/0108/131718_798256e5_301269.png)
 
 * 微信提交书籍共享请求
 
@@ -31,4 +31,4 @@
 
 ## 服务端
 
-服务端接口请参考 [Symphony](https://github.com/b3log/symphony) 项目 :)
+服务端接口请参考 Symphony 项目 :)
