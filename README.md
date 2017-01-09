@@ -1,6 +1,10 @@
 # symphony-weapp
 
-Symphony 社区平台的微信小程序，提供一些实用工具服务，比如[『书单』](https://hacpai.com/tag/book_share)，可前往 [体验](https://hacpai.com/article/1483598914214) 。
+
+Symphony 社区平台的微信小程序，提供一些实用工具服务，比如[『书单』](https://hacpai.com/tag/book_share)。
+![hacpai 小程序](http://git.oschina.net/uploads/images/2017/0109/095544_a27820f2_301269.png "在这里输入图片标题")
+
+
 ## 登录
 
 ![login](http://git.oschina.net/uploads/images/2017/0108/131646_c5875567_301269.png)
