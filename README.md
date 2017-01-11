@@ -1,7 +1,7 @@
 # symphony-weapp
 
 
-Symphony 社区平台的微信小程序，提供一些实用工具服务，比如[『书单』](https://hacpai.com/tag/book_share)。
+Symphony 社区平台的微信小程序，提供一些实用工具服务，比如[『书单』](https://hacpai.com/tag/book_share)。小程序暂不支持注册，体验需前往[注册](https://hacpai.com/register?r=Vanessa)
 
 ![hacpai 小程序](http://git.oschina.net/uploads/images/2017/0109/095544_a27820f2_301269.png "在这里输入图片标题")
 
