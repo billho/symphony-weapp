@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/scan/scan",
     "pages/login/login",
     "pages/share/share",
-    "pages/scan/scan"
+    "pages/register/register"
   ],
   "window": {
     "backgroundTextStyle": "light",

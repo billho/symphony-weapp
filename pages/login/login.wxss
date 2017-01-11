@@ -1,22 +1,24 @@
 .logo {
   width: 254px;
   height: 183px;
-  margin: 40rpx auto;
+  margin: 0 auto;
   display: block;
-}
-
-input {
-  border: 1px solid #ccc;
-  background-color: #fafafa;
-  border-radius: 3px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075) inset;
-  padding: 10px 10px;
-  box-sizing: border-box;
-  margin-bottom: 40rpx;
-  height: 46px;
 }
 
 .ft-center {
   margin-bottom: 50rpx;
   color: #666;
+}
+
+.captcha-wrap {
+  position: relative;
+}
+
+.captcha {
+  height: 44px;
+  width: 102px;
+  position: absolute;
+  right: 2px;
+  top: 1px;
+  z-index: 2;
 }

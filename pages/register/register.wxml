@@ -1,0 +1,16 @@
+
+<!--pages/register/register.wxml-->
+<view class="body wrapper">
+  <form bindsubmit="regishter">
+    <image class="logo" src="../../image/logo.png"></image>
+    <view class="ft-center">黑客与画家的社区</view>
+    <input name="userName" placeholder="用户名（数字/英文）" />
+    <input name="userEmail" placeholder="邮箱（国内邮箱）" />
+    <view class="captcha-wrap">
+      <input name="captcha" placeholder="验证码" style="margin-bottom:0" />
+      <image class="captcha" bindtap="refreshCaptcha" src="{{captchaURL}}" />
+    </view>
+    <button type="primary" form-type="submit">注册</button>
+    <button bindtap="goLogin">登录</button>
+  </form>
+</view>

@@ -4,6 +4,8 @@ Page({
   data: {
     userName: 'book_share',
     password: 'book_share',
+    needCaptcha: false,
+    captchaURL: '',
     disabled: true
   },
   /**
@@ -62,16 +64,34 @@ Page({
     })
   },
   /**
+   * 跳转到注册页面
+   */
+  goRegister: function () {
+    wx.redirectTo({
+      url: '../register/register'
+    })
+  },
+  /**
+   * 刷新验证码 
+   */
+  refreshCaptcha: function () {
+    this.setData({
+      captchaURL: 'https://hacpai.com/captcha/login?needCaptcha=' + this.data.needCaptcha + '&t=' + (new Date()).getTime()
+    });
+  },
+  /**
    * 登录
    */
   login: function (e) {
     Util.networkStatus()
+    var that = this;
     wx.request({
       url: 'https://hacpai.com/login',
       data: {
         nameOrEmail: e.detail.value.userName,
         userPassword: calcMD5(e.detail.value.password),
         rememberLogin: true,
+        captcha: e.detail.value.captcha
       },
       method: 'POST',
       header: {
@@ -87,12 +107,18 @@ Page({
           return false;
         }
         if (!res.data.sc) {
+          if (res.data.needCaptcha) {
+            that.setData({
+              needCaptcha: res.data.needCaptcha,
+              captchaURL: 'https://hacpai.com/captcha/login?needCaptcha=' + res.data.needCaptcha + '&t=0.6956869461435669'
+            });
+          }
           wx.showToast({
-            title: res.data.msg,
-            icon: 'loading',
-            duration: 3000
-          })
-          return false;
+              title: res.data.msg,
+              icon: 'loading',
+              duration: 3000
+            })
+            return false;
         }
 
         wx.setStorage({
