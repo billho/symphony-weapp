@@ -11,6 +11,6 @@
     <image bindtap="refreshCaptcha" class="captcha" src="{{captchaURL}}"/>
     </view>
     <button disabled="{{disabled}}" type="primary" form-type="submit">登录</button>
-    <button bindtap="goRegister">注册</button>
+    <button bindtap="goRegister">新用户</button>
   </form>
 </view>
