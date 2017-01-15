@@ -28,7 +28,3 @@ input {
   margin-bottom: 30rpx;
   height: 46px;
 }
-
-button {
-    margin-bottom: 30rpx;
-}

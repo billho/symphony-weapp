@@ -22,3 +22,7 @@
   top: 1px;
   z-index: 2;
 }
+
+form button[type=primary] {
+  margin-bottom: 30rpx;
+}

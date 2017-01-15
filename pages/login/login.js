@@ -114,17 +114,31 @@ Page({
             });
           }
           wx.showToast({
-              title: res.data.msg,
-              icon: 'loading',
-              duration: 3000
-            })
-            return false;
+            title: res.data.msg,
+            icon: 'loading',
+            duration: 3000
+          })
+          return false;
         }
 
         wx.setStorage({
           key: "cookie",
           data: res.data.token
         })
+
+        if (e.detail.value.userName === 'book_share') {
+          wx.showModal({
+            title: '提示',
+            content: '⚠️ 请使用黑客派个人账号进行登录，否则分享数据将被清空',
+            showCancel: false,
+            success: function () {
+              wx.redirectTo({
+                url: '../scan/scan'
+              })
+            }
+          })
+          return false;
+        }
 
         wx.redirectTo({
           url: '../scan/scan'
