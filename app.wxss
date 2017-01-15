@@ -1,21 +1,25 @@
 .body {
-    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
-    min-height: 100%;
-    font-size: 32rpx;
-    color: #333;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  min-height: 100%;
+  font-size: 32rpx;
+  color: #333;
 }
 
 .wrapper {
-    padding: 0 50rpx;
+  padding: 0 50rpx;
 }
 
-.ft-center {
-    text-align: center;
+.fn-right {
+  float: right;
 }
 
 .ft-warn {
-    font-weight: 600;
-    color: #d23f31;
+  font-weight: 600;
+  color: #d23f31;
+}
+
+.ft-gray {
+  color: #999;
 }
 
 input {
@@ -27,4 +31,27 @@ input {
   box-sizing: border-box;
   margin-bottom: 30rpx;
   height: 46px;
+}
+
+.logo {
+  width: 254px;
+  height: 183px;
+  margin: 0 auto;
+  display: block;
+}
+
+.logo-sub {
+  text-align: center;
+  margin-bottom: 50rpx;
+  color: #666;
+}
+
+.bottom-btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 50rpx;
 }

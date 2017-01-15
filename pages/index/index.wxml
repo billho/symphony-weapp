@@ -1,0 +1,14 @@
+<view class="body wrapper">
+  <include src="../template/logo.wxml" />
+  <view>
+    <navigator url="../list/list/list" open-type="navigate">书单
+      <text class="fn-right ft-gray">></text>
+    </navigator>
+    <navigator url="../book/scan/scan" open-type="navigate">扫描 ISBN
+      <text class="fn-right ft-gray">></text>
+    </navigator>
+  </view>
+</view>
+<view class="bottom-btn wrapper">
+  <button bindtap="logout">登出</button>
+</view>

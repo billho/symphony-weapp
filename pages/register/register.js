@@ -1,23 +1,7 @@
-// pages/register/register.js
 var Util = require('../util/util.js');
 Page({
   data: {
     captchaURL: 'https://hacpai.com/captcha'
-  },
-  onLoad: function (options) {
-    // 页面初始化 options为页面跳转所带来的参数
-  },
-  onReady: function () {
-    // 页面渲染完成
-  },
-  onShow: function () {
-    // 页面显示
-  },
-  onHide: function () {
-    // 页面隐藏
-  },
-  onUnload: function () {
-    // 页面关闭
   },
   /**
    * 跳转到登录页面
@@ -55,6 +39,7 @@ Page({
       },
       success: function (res) {
         if (res.errMsg !== 'request:ok') {
+          that.refreshCaptcha();
           wx.showToast({
             title: res.errMsg,
             icon: 'loading',
@@ -63,6 +48,7 @@ Page({
           return false;
         }
         if (!res.data.sc) {
+          that.refreshCaptcha();
           wx.showToast({
             title: res.data.msg,
             icon: 'loading',
@@ -70,8 +56,8 @@ Page({
           })
           return false;
         }
-        
-         wx.showModal({
+
+        wx.showModal({
           title: '提示',
           content: res.data.msg,
           showCancel: false

@@ -1,23 +1,13 @@
-// pages/scan/scan.js
-var Util = require('../util/util.js')
+var Util = require('../../util/util.js')
 Page({
   data: {
     ISBN: '',
-    book: {},
-    url: ''
+    book: {}
   },
   /**
    * 共享给其他人查阅
    */
   share: function () {
-    Util.networkStatus()
-    if (this.data.url !== '') {
-      wx.showModal({
-        title: '共享成功',
-        content: '请前往 ' + this.data.url + ' 进行查看！'
-      })
-      return false;
-    }
     var that = this;
     wx.showModal({
       title: '提示',
@@ -40,6 +30,7 @@ Page({
    * 分享到黑客派
    */
   _shareToHacpai: function () {
+    Util.networkStatus();
     var that = this;
     wx.request({
       url: 'https://hacpai.com/book/share',
@@ -68,12 +59,17 @@ Page({
           })
           return false;
         }
-        that.setData({
-          url: res.data.url
-        })
         wx.showModal({
           title: '分享成功',
-          content: '请前往 ' + res.data.url + ' 进行查看！'
+          content: '请前往书单列表进行查看！',
+          showCancel: false,
+          success: function (res) {
+            if (res.confirm) {
+              wx.redirectTo({
+                url: '../../list/list/list'
+              })
+            }
+          }
         })
       },
       fail: function (res) {

@@ -1,6 +1,7 @@
 <view class="body wrapper share">
   <view class="content">
     <text class="title">关于『书单』</text>
+    {{test}}
     <view>
       书单是黑客派社区的一个纸质书共享活动，所有书均来自捐赠，原则上当前的书籍持有者有义务将书寄送给需要的会员。
     </view>
@@ -37,11 +38,7 @@
     <view>黑客派的『书单』将作为长期活动持续下去，大家随时都能参与进来，让你我的生活变得更丰富有趣！
     </view>
   </view>
-  <view class="bottom-btn wrapper" wx:if="{{isLogin}}">
-    <button bindtap="logout" class="logout">登出</button>
+  <view class="bottom-btn wrapper">
     <button type="primary" bindtap="scan">ISBN 扫码 </button>
-  </view>
-  <view class="bottom-btn wrapper" wx:else>
-    <button bindtap="goLogin" type="primary">参与『书单』计划</button>
   </view>
 </view>

@@ -1,8 +1,11 @@
 {
   "pages": [
-    "pages/scan/scan",
     "pages/login/login",
-    "pages/share/share",
+    "pages/index/index",
+    "pages/book/share/share",
+    "pages/book/scan/scan",
+    "pages/list/list/list",
+    "pages/list/detail/detail",
     "pages/register/register"
   ],
   "window": {

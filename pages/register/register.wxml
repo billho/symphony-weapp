@@ -1,9 +1,6 @@
-
-<!--pages/register/register.wxml-->
 <view class="body wrapper">
   <form bindsubmit="regishter">
-    <image class="logo" src="../../image/logo.png"></image>
-    <view class="ft-center">黑客与画家的社区</view>
+    <include src="../template/logo.wxml"/>
     <input name="userName" placeholder="用户名（数字/英文）" />
     <input name="userEmail" placeholder="邮箱（国内邮箱）" />
     <view class="captcha-wrap">

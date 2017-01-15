@@ -1,0 +1,6 @@
+<scroll-view scroll-y="true" class="wrapper"  bindscrolltoupper="refresh" bindscrolltolower="loadMore">
+  <view class="item" wx:for="{{articles}}">
+    <image src="{{item.articleAuthorThumbnailURL}}" />
+    <text>{{item.articleTitle}}</text>
+  </view>
+</scroll-view>

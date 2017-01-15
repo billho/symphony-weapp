@@ -1,15 +1,3 @@
-.logo {
-  width: 254px;
-  height: 183px;
-  margin: 0 auto;
-  display: block;
-}
-
-.ft-center {
-  margin-bottom: 50rpx;
-  color: #666;
-}
-
 .captcha-wrap {
   position: relative;
 }

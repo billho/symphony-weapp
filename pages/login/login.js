@@ -13,6 +13,17 @@ Page({
    * options url 参数
    */
   onLoad: function (options) {
+    wx.getStorage({
+      key: 'cookie',
+      success: function (res) {
+        if (!res.data) {
+          return false;
+        }
+        wx.redirectTo({
+          url: '../index/index'
+        })
+      }
+    })
 
     Util.networkStatus()
     var that = this;
@@ -50,18 +61,6 @@ Page({
         })
       }
     });
-
-    wx.getStorage({
-      key: 'cookie',
-      success: function (res) {
-        if (!res.data) {
-          return false
-        }
-        wx.redirectTo({
-          url: '../scan/scan'
-        })
-      }
-    })
   },
   /**
    * 跳转到注册页面
@@ -133,15 +132,14 @@ Page({
             showCancel: false,
             success: function () {
               wx.redirectTo({
-                url: '../scan/scan'
+                url: '../index/index'
               })
             }
           })
           return false;
         }
-
         wx.redirectTo({
-          url: '../scan/scan'
+          url: '../index/index'
         })
       },
       fail: function (res) {
