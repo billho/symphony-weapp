@@ -43,7 +43,7 @@ Page({
           wx.showToast({
             title: res.errMsg,
             icon: 'loading',
-            duration: 3000
+            mask: true
           })
           return false;
         }
@@ -101,7 +101,7 @@ Page({
           wx.showToast({
             title: res.errMsg,
             icon: 'loading',
-            duration: 3000
+            mask: true
           })
           return false;
         }
@@ -115,7 +115,7 @@ Page({
           wx.showToast({
             title: res.data.msg,
             icon: 'loading',
-            duration: 3000
+            mask: true
           })
           return false;
         }
@@ -146,7 +146,7 @@ Page({
         wx.showToast({
           title: res.errMsg,
           icon: 'loading',
-          duration: 3000
+          mask: true
         })
       }
     })

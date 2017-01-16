@@ -1,7 +1,6 @@
 .share {
   height: 100vh;
   overflow: auto;
-  padding-bottom: 66px;
   box-sizing: border-box;
 }
 

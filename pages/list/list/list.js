@@ -6,6 +6,24 @@ Page({
     isFinished: false
   },
   /**
+   * 分享
+   */
+  onShareAppMessage: function () {
+    return {
+      title: '书单 - 黑客派',
+      desc: '『书单』是 黑客派 社区的一个纸质书共享计划，所有书均来自捐赠，原则上当前的书籍持有者有义务将书寄送给需要的会员。',
+      path: '/pages/list/list/list'
+    }
+  },
+  /**
+   * 跳转到详情页面
+   */
+  goDetail: function (event) {
+    wx.navigateTo({
+      url: '/pages/book/share/share?share=no&ISBN=' + event.currentTarget.dataset.isbn
+    })
+  },
+  /**
    * 页面加载
    */
   onLoad: function (options) {
@@ -32,7 +50,8 @@ Page({
       wx.showToast({
         title: '已经到底了',
         icon: 'loading',
-        duration: 3000
+        duration: 2000,
+        mask: true
       })
       return false;
     }
@@ -44,6 +63,13 @@ Page({
   _getList: function (p) {
     Util.networkStatus()
     let that = this;
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 1000,
+      mask: true
+    })
+
     wx.request({
       url: 'https://hacpai.com/books',
       method: 'POST',
@@ -89,6 +115,7 @@ Page({
           })
         }
 
+        wx.hideToast();
       },
       fail: function (res) {
         wx.showToast({

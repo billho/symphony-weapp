@@ -1,4 +1,4 @@
-<view class="body wrapper share" wx:if="{{book.bookTitle}}">
+<view class="body wrapper share" style="padding-bottom: {{share ? 66 : 0}}px" wx:if="{{book.bookTitle}}">
   <view class="content">
     <text class="title">📖《{{book.bookTitle}}》纸质实体书免费送啦！</text>
     <image mode="aspectFit" src="{{book.bookImgURL}}" />
@@ -55,7 +55,7 @@
       </view>
     </view>
   </view>
-  <view class="bottom-btn wrapper">
+  <view class="bottom-btn wrapper" wx:if="{{share}}">
     <button type="warn" bindtap="share">共享</button>
   </view>
 </view>

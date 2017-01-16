@@ -1,11 +1,10 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/index/index",
+    "pages/login/login",
     "pages/book/share/share",
     "pages/book/scan/scan",
     "pages/list/list/list",
-    "pages/list/detail/detail",
     "pages/register/register"
   ],
   "window": {

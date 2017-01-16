@@ -2,12 +2,40 @@ var Util = require('../../util/util.js')
 Page({
   data: {
     ISBN: '',
-    book: {}
+    book: {},
+    share: true
+  },
+  /**
+   * 分享
+   */
+  onShareAppMessage: function () {
+    return {
+      title: '《' + this.book.bookTitle + '》纸质实体书免费送啦！',
+      desc: this.book.bookSummary,
+      path: '/pages/book/share/share?ISBN=' + this.data.ISBN
+    }
   },
   /**
    * 共享给其他人查阅
    */
   share: function () {
+    // need login
+    if (!wx.getStorageSync('cookie')) {
+      wx.showModal({
+        title: '提示',
+        content: '请先登录 😊',
+        success: function (res) {
+          if (!res.confirm) {
+            return false;
+          }
+          wx.navigateTo({
+            url: '../../login/login'
+          })
+        }
+      })
+      return false;
+    }
+
     var that = this;
     wx.showModal({
       title: '提示',
@@ -89,7 +117,8 @@ Page({
     Util.networkStatus()
     let that = this;
     that.setData({
-      ISBN: options.ISBN
+      ISBN: options.ISBN,
+      share: (options.share === 'no' ? false : true)
     });
     wx.request({
       url: 'https://hacpai.com/book/info',
