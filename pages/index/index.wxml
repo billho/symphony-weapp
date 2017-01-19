@@ -4,9 +4,9 @@
     <navigator url="../list/list/list" open-type="navigate">书单
       <text class="fn-right ft-gray">></text>
     </navigator>
-    <navigator url="../book/scan/scan" open-type="navigate">扫描 ISBN
+    <view class="nav" bindtap="scan">扫描 ISBN
       <text class="fn-right ft-gray">></text>
-    </navigator>
+    </view>
   </view>
 </view>
 <view class="bottom-btn wrapper" wx:if="{{isLogin}}">
