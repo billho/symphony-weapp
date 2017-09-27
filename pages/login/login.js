@@ -125,6 +125,11 @@ Page({
           data: res.data.token
         })
 
+        wx.setStorage({
+          key: "cookieName",
+          data: res.data.tokenName
+        })
+
         if (e.detail.value.userName === 'book_share') {
           wx.showModal({
             title: '提示',

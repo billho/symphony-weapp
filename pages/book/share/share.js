@@ -68,7 +68,7 @@ Page({
       method: 'POST',
       header: {
         'content-type': 'application/json',
-        'Cookie': 'b3log-latke=' + wx.getStorageSync('cookie')
+        'Cookie': Util.getCookieName() + '=' + wx.getStorageSync('cookie')
       },
       success: function (res) {
         if (res.errMsg !== 'request:ok') {
@@ -128,7 +128,7 @@ Page({
       method: 'POST',
       header: {
         'content-type': 'application/json',
-        'Cookie': 'b3log-latke=' + wx.getStorageSync('cookie')
+        'Cookie': Util.getCookieName() + '=' + wx.getStorageSync('cookie')
       },
       success: function (res) {
         if (res.errMsg !== 'request:ok') {

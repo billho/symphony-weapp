@@ -17,6 +17,11 @@ function networkStatus() {
     })
 }
 
+function getCookieName () {
+  var cookieName = wx.getStorageSync('cookieName');
+  return cookieName ? cookieName : 'symphony';
+}
 module.exports = {
-    networkStatus: networkStatus
+    networkStatus: networkStatus,
+    getCookieName: getCookieName
 }
