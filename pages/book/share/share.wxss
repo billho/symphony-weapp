@@ -1,6 +1,7 @@
 .share {
   height: 100vh;
   overflow: auto;
+  -webkit-overflow-scrolling: touch; 
   box-sizing: border-box;
 }
 
