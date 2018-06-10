@@ -1,0 +1,12 @@
+<view class="forward">
+  <navigator target="miniProgram" app-id="wx461811d7b413d64f" path="/pages/index" class="forward__panel">
+    <view class="forward__main">
+      <image class="forward__logo" src="../../image/chainbook.png">
+      </image>
+      <view class="forward__go">前往链书社</view>
+    </view>
+  </navigator>
+  <view class="forward__link" bindtap="goB3log">
+    查看书单历史数据
+  </view>
+</view>

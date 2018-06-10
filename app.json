@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/forward/index",
+    "pages/forward/webview",
     "pages/index/index",
     "pages/login/login",
     "pages/book/share/share",
