@@ -1,3 +1,7 @@
+## 目前书单小程序已经下线，请关注其升级版[『链书社』](https://hacpai.com/tag/chainbook)！
+
+----
+
 # symphony-weapp
 
 Symphony 社区平台的微信小程序，提供一些实用工具服务，比如[『书单』](https://hacpai.com/tag/book_share)。小程序暂不支持注册，体验需前往[注册](https://hacpai.com/register?r=Vanessa)。
