@@ -4,5 +4,5 @@ Page({
     wx.navigateTo({
       url: '/pages/forward/webview?url=https://hacpai.com/tag/book_share'
     })
-  },
+  }
 })
